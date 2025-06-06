@@ -316,16 +316,20 @@
 
   <!-- Sound effect -->
 <script>
-  const braille = document.querySelector('.braille');
-  const pulseAudio = new Audio("https://pixabay.com/sound-effects/short-beep-tone-47916/");
+<script>
+  const button = document.getElementById('playSound');
+  const audio = new Audio("beep.mp3");
 
-  braille.addEventListener('mouseover', () => {
-    pulseAudio.currentTime = 0;
-    pulseAudio.play().catch(e => {
-      console.warn("Playback prevented by browser until user interacts.");
+  button.addEventListener('click', () => {
+    audio.currentTime = 0; // Restart from beginning
+    audio.play().then(() => {
+      console.log("Sound played!");
+    }).catch((error) => {
+      console.warn("Playback failed:", error);
     });
   });
 </script>
+
 
 </body>
 </html>
