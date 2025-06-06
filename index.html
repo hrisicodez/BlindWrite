@@ -214,6 +214,21 @@
       line-height: 1.5;
       color: #004d40;
     }
+
+        footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9rem;
+      background: #121212;
+    }
+    footer a {
+      color: #00f7ff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -277,6 +292,21 @@
       </div>
     </div>
   </section>
+
+  <section id="contact">
+    <h2>Contact Us 📩</h2>
+    <p>Have questions or want to collaborate? Reach out to us!</p>
+    <form action="mailto:contact@blindwrite.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" id="sendBtn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 BlindWrite. All rights reserved.
+  </footer>
 
   <!-- Sound effect -->
   <script>
