@@ -39,27 +39,27 @@
       background: #121212;
       padding: 1rem 2rem;
       display: flex;
+      justify-content: center;
       align-items: center;
-      position: relative;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
     .logo {
-      height: 50px;
-    }
-
-    .heading-wrapper {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      height: 90px;
+      width: auto;
     }
 
     header h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 700;
       color: #00f7ff;
       margin: 0;
-      text-align: center;
     }
 
     nav {
@@ -137,7 +137,6 @@
       color: #aaa;
     }
 
-    /* --- About Section --- */
     #about {
       background-color: #fff;
       padding: 60px 20px;
@@ -163,7 +162,6 @@
       font-weight: bold;
     }
 
-    /* --- Features Section --- */
     #features {
       background: #e0f7fa;
       padding: 60px 20px;
@@ -215,19 +213,36 @@
       color: #004d40;
     }
 
-        footer {
+    #contact {
+      background: #f8f9fa;
+      padding: 60px 20px;
       text-align: center;
-      padding: 20px;
-      color: #666;
-      font-size: 0.9rem;
-      background: #121212;
     }
-    footer a {
-      color: #00f7ff;
+
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #121212;
+    }
+
+    #contact p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    #contact a {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1rem;
+      background: #00bcd4;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
       text-decoration: none;
     }
-    footer a:hover {
-      text-decoration: underline;
+
+    #contact a:hover {
+      background: #008c9e;
     }
   </style>
 </head>
@@ -238,8 +253,8 @@
 
   <!-- Header -->
   <header>
-    <img src="BLIND.png" alt="BlindWrite Logo" class="logo" />
-    <div class="heading-wrapper">
+    <div class="header-container">
+      <img src="BLIND.png" alt="BlindWrite Logo" class="logo" />
       <h1>BlindWrite</h1>
     </div>
   </header>
@@ -270,7 +285,6 @@
       <span>BlindWrite</span> is an innovative assistive technology startup that bridges the gap between neural activity and communication.
       We convert brain EEG signals into readable Braille output, empowering visually impaired individuals with a new level of independence.
       Our mission is to provide a <span>wearable, adaptive, and intelligent</span> solution that translates thoughts into tactile language.
-      From real-time signal decoding to personalized Braille feedback, BlindWrite is redefining accessibility.
     </p>
   </section>
 
@@ -293,20 +307,12 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Us 📩</h2>
-    <p>Have questions or want to collaborate? Reach out to us!</p>
-    <form action="mailto:contact@blindwrite.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit" id="sendBtn">Send Message</button>
-    </form>
+    <h2>Contact Us</h2>
+    <p>Have questions or want to collaborate with us? Reach out via email or follow us on social media.</p>
+    <a href="mailto:contact@blindwrite.tech">📧 contact@blindwrite.tech</a>
   </section>
-
-  <footer>
-    &copy; 2025 BlindWrite. All rights reserved.
-  </footer>
 
   <!-- Sound effect -->
   <script>
