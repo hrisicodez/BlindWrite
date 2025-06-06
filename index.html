@@ -315,13 +315,17 @@
   </section>
 
   <!-- Sound effect -->
-  <script>
-    const wave = document.querySelector('.wave');
-    let pulseAudio = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-quick-win-video-game-notification-269.wav");
-    wave.addEventListener('animationiteration', () => {
-      pulseAudio.play();
+<script>
+  const braille = document.querySelector('.braille');
+  const pulseAudio = new Audio("https://pixabay.com/sound-effects/short-beep-tone-47916/");
+
+  braille.addEventListener('mouseover', () => {
+    pulseAudio.currentTime = 0;
+    pulseAudio.play().catch(e => {
+      console.warn("Playback prevented by browser until user interacts.");
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
