@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BlindWrite | Empowering Through Brainwaves</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(120deg, #e3f2fd, #fce4ec);
+      color: #333;
+    }
+
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: black;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00f7ff;
+      font-size: 2rem;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 3px;
+      animation: fadeout 3s forwards 3s;
+    }
+
+    @keyframes fadeout {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    header {
+      background: #121212;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .heading-wrapper {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #00f7ff;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: #00f7ff;
+    }
+
+    .hero-section {
+      background: linear-gradient(145deg, #121212, #1f1f1f);
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .brainwave {
+      position: relative;
+      margin: auto;
+      max-width: 600px;
+    }
+
+    .wave {
+      height: 100px;
+      background: repeating-linear-gradient(to right, #00f7ff 0 5px, transparent 5px 15px);
+      animation: pulse 2s infinite ease-in-out;
+      margin-bottom: 40px;
+      border-radius: 6px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scaleY(1); opacity: 0.6; }
+      50% { transform: scaleY(1.5); opacity: 1; }
+    }
+
+    .braille-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .braille {
+      font-size: 3rem;
+      letter-spacing: 1rem;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .braille:hover::after {
+      content: "HELLO";
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      color: #00f7ff;
+    }
+
+    .label {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* --- About Section --- */
+    #about {
+      background-color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #about h2 {
+      font-size: 2.5rem;
+      color: #121212;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    #about span {
+      color: #00bcd4;
+      font-weight: bold;
+    }
+
+    /* --- Features Section --- */
+    #features {
+      background: #e0f7fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #features h2 {
+      font-size: 2.5rem;
+      color: #006064;
+      margin-bottom: 40px;
+    }
+
+    .feature-list {
+      display: flex;
+      max-width: 900px;
+      margin: 0 auto;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .feature-item {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      max-width: 280px;
+      color: #004d40;
+      font-weight: 600;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    .feature-item h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #00796b;
+    }
+
+    .feature-item p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader">BlindWrite Neural Sync...</div>
+
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="BlindWrite Logo" class="logo" />
+    <div class="heading-wrapper">
+      <h1>BlindWrite</h1>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="brainwave">
+      <div class="wave"></div>
+      <div class="braille-container">
+        <div class="braille" title="Hello in Braille">⠓⠑⠇⠇⠕</div>
+        <p class="label">Hover to translate Braille</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About BlindWrite</h2>
+    <p>
+      <span>BlindWrite</span> is an innovative assistive technology startup that bridges the gap between neural activity and communication.
+      We convert brain EEG signals into readable Braille output, empowering visually impaired individuals with a new level of independence.
+      Our mission is to provide a <span>wearable, adaptive, and intelligent</span> solution that translates thoughts into tactile language.
+      From real-time signal decoding to personalized Braille feedback, BlindWrite is redefining accessibility.
+    </p>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Our Key Features</h2>
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>🧠 Real-Time EEG Translation</h3>
+        <p>Instantly converts brainwave signals into Braille text, providing seamless communication for users.</p>
+      </div>
+      <div class="feature-item">
+        <h3>👕 Wearable & Comfortable</h3>
+        <p>Ergonomically designed devices that users can wear comfortably for extended periods.</p>
+      </div>
+      <div class="feature-item">
+        <h3>🤖 Adaptive Learning AI</h3>
+        <p>Smart algorithms that learn individual brain patterns to improve accuracy and responsiveness over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sound effect -->
+  <script>
+    const wave = document.querySelector('.wave');
+    let pulseAudio = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-quick-win-video-game-notification-269.wav");
+    wave.addEventListener('animationiteration', () => {
+      pulseAudio.play();
+    });
+  </script>
+
+</body>
+</html>
